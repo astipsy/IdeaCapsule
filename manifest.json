@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "idea capsule",
+    "version": "1.0",
+    "description": "Record your idea any time",
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["js/layui/layui.js", "js/index.js"],
+        "run_at": "document_idle",
+        "all_frames":true
+      }
+    ],
+    "permissions": [
+      "storage",
+      "activeTab"
+    ],
+    "icons": {
+      "16": "assets/icon.jpg",
+      "32": "assets/icon.jpg",
+      "48": "assets/icon.jpg",
+      "128": "assets/icon.jpg"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": [
+            "html/index.html",
+            "js/index.js",
+            "js/layui/*",
+            "js/layui/font/*",
+            "assets/icon.jpg"
+        ],
+        "matches": ["<all_urls>"]
+      }
+    ]
+}
