@@ -23,6 +23,14 @@ layui.use(['layer', 'jquery', 'form'], function(){
     $ = layui.$;
     var form = layui.form;
 
+    chrome.storage.local.get(['capsule_switch'], function(result) {
+        if (result.capsule_switch === undefined || result.capsule_switch) {
+            $(document).find(".wait-box").show()
+        } else {
+            $(document).find(".wait-box").hide()
+        }
+    })
+
     $(document).on("click", ".wait-box", function() {
         document.getElementsByClassName('wait-box')[0].style.display = 'none'
         document.getElementsByClassName('pill-list')[0].style.display = 'block'
@@ -213,5 +221,4 @@ layui.use(['layer', 'jquery', 'form'], function(){
         $('#pill-list').html(html)
         form.render();
     }
-    
 });

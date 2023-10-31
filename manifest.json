@@ -15,11 +15,17 @@
       "storage",
       "activeTab"
     ],
+    "externally_connectable": {
+      "matches": ["<all_urls>"]
+    },
     "icons": {
       "16": "assets/icon.jpg",
       "32": "assets/icon.jpg",
       "48": "assets/icon.jpg",
       "128": "assets/icon.jpg"
+    },
+    "action": {
+      "default_popup": "html/popup.html"
     },
     "web_accessible_resources": [
       {
