@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "idea capsule",
+    "name": "Idea Capsule",
     "version": "1.0",
     "description": "Record your idea any time",
     "content_scripts": [
